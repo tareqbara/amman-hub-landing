@@ -152,13 +152,35 @@ h2 {
   gap: 2rem;
 }
 
+/* Navbar specifics */
+.mobile-menu-btn { display: none; }
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
 @media (max-width: 768px) {
   h1 { font-size: 2.2rem; word-wrap: break-word; hyphens: auto; }
   h2 { font-size: 1.8rem; }
   .grid-cols-2, .grid-cols-3, .footer-grid { grid-template-columns: 1fr; }
   .section { padding: 4rem 0; }
   img { max-width: 100%; height: auto; }
-  .btn { width: 100%; text-align: center; }
+  .btn { width: 100%; text-align: center; justify-content: center; }
   .container { padding: 0 1.5rem; }
   .glass-panel { padding: 1.5rem; }
+  
+  .mobile-menu-btn { display: block; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    background: var(--color-bg-dark);
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--color-glass-border);
+  }
+  .nav-links.open { display: flex; }
+  .hero-buttons { flex-direction: column; width: 100%; gap: 1rem; }
 }

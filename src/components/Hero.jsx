@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="section" style={{ minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
+    <section className="section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: '8rem' }}>
       <div className="container">
         <div className="grid grid-cols-2" style={{ alignItems: 'center' }}>
           <div className="animate-fade-in">
@@ -11,9 +11,9 @@ const Hero = () => {
             <p style={{ fontSize: '1.2rem', marginBottom: '2rem', color: 'var(--color-text-muted)' }}>
               Amman Hub is a premium movement bringing isolated creators out of the shadows and connecting them with a culture-craving audience.
             </p>
-            <div style={{ display: 'flex', gap: '1rem' }}>
+            <div className="hero-buttons" style={{ display: 'flex', gap: '1rem' }}>
               <a href="#drops" className="btn btn-primary">
-                Shop Limited Drops <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
+                Limited Drops <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
               </a>
               <a href="#about" className="btn btn-outline">Explore the Hub</a>
             </div>

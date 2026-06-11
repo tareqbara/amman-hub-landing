@@ -10,7 +10,7 @@ const UpcomingDrops = () => {
   return (
     <section id="drops" className="section" style={{ backgroundColor: 'rgba(126, 34, 206, 0.05)' }}>
       <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '1rem', marginBottom: '3rem' }}>
           <div>
             <h2>The Storefront</h2>
             <p style={{ color: 'var(--color-text-muted)' }}>Limited-edition drops from Amman's finest.</p>
@@ -24,12 +24,12 @@ const UpcomingDrops = () => {
               <div style={{ height: '300px', borderRadius: '0.5rem', overflow: 'hidden', marginBottom: '1rem' }}>
                 <img src={drop.image} alt={drop.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div>
                   <div style={{ fontSize: '0.8rem', color: 'var(--color-accent)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.2rem' }}>{drop.type}</div>
-                  <h4 style={{ margin: 0, fontSize: '1.2rem' }}>{drop.title}</h4>
+                  <h4 style={{ margin: 0, fontSize: '1.2rem', width: '100%' }}>{drop.title}</h4>
                 </div>
-                <button className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Notify Me</button>
+                <button className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem', width: '100%' }}>Notify Me</button>
               </div>
             </div>
           ))}
